@@ -1,0 +1,15 @@
+version: 0.2
+
+env:
+  variables:
+    CWQA_TARGETENV: ''
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.9
+    commands:
+      - echo 'Nothing to do!'
+  build:
+    commands:
+      - aws codepipeline start-pipeline-execution --name Trigger
